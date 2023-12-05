@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Connect4Game</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <script defer src="index.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <div class="header">
+        <div class="menu">
+          <button class="btn">MENU</button>
+        </div>
+        <div class="menu-logo">
+          <img
+            src="http://localhost:3000/static/media/logo.18f406c1e091b7f33f727e65e6a8cf5b.svg"
+            alt=""
+          />
+        </div>
+        <div class="restart">
+          <button class="btn restart-btn">RESTART</button>
+        </div>
+      </div>
+      <div class="content">
+        <div class="player">
+          <img
+            class="player__img"
+            src="http://localhost:3000/static/media/player-one.dddd4c6dd39939e6572b23602ed52bf8.svg"
+            alt=""
+          />
+          <p class="player__title">PLAYER 1</p>
+          <p class="player__score scoreOfPlayer1">0</p>
+        </div>
+
+        <div class="board-container">
+          <div class="marker">
+            <div class="marker-red" id="marker"></div>
+          </div>
+          <div id="playing-preventer"></div>
+          <div class="black-board"></div>
+          <div class="white-board"></div>
+          <div class="turn">
+            <p class="turn__player">PLAYER 1 TURN</p>
+            <p class="turn__time">30 S</p>
+          </div>
+        </div>
+        <div class="player">
+          <img
+            class="player__img"
+            src="http://localhost:3000/static/media/player-two.3808ca69d8458efbdca19bd10962ae09.svg"
+            alt=""
+          />
+          <p class="player__title">PLAYER 2</p>
+          <p class="player__score scoreOfPlayer2">0</p>
+        </div>
+      </div>
+
+      <div class="winner"></div>
+    </div>
+    <div id="turn-bg"></div>
+  </body>
+</html>

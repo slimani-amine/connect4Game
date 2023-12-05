@@ -1,0 +1,62 @@
+.board-container {
+  width: 610px;
+  height: 600px;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+#playing-preventer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.black-board {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background-image: url(../../images/board-layer-black-large.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: repeat(7, 40px);
+  grid-template-rows: 1fr;
+  justify-content: center;
+  gap: 6.5px;
+}
+
+.black-board > div {
+  position: relative;
+}
+
+.white-board {
+  width: 610px;
+  height: 585px;
+  border-radius: 20px;
+  background-image: url(../../images/board-layer-white-large.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: repeat(7, 40px);
+  grid-template-rows: 1fr;
+  justify-content: center;
+  gap: 6.5px;
+}
+.red-col {
+    background-color: red;
+  }
+
+  .yellow-col {
+    background-color: yellow;
+  }

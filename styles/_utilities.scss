@@ -1,0 +1,24 @@
+.btn {
+  cursor: pointer;
+  padding: 1rem 2rem;
+  color: #fff;
+  background-color: $dark-purple;
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: 1.8rem;
+  border-radius: $radius60;
+  border: none;
+  transition: $transition1;
+
+  &:hover {
+    background-color: $pink;
+  } 
+}
+.title {
+  color: $primary;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0.25px;
+}
