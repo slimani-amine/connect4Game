@@ -10,13 +10,13 @@
   <body>
     <div id="main-page">
       <div class="main-page-header">
-        <div class="menu-btn">
+        <div class="btn menu-btn">
           <p>menu</p>
         </div>
         <div>
           <img src="./images/logo.svg" alt="connect four gmae logo" />
         </div>
-        <div class="menu-btn restart">
+        <div class="btn restart">
           <p>restart</p>
         </div>
       </div>
@@ -63,10 +63,21 @@
       <div id="wins-rect" class="wins-rect">
         <p id="winner"></p>
         <p id="wins-draw"></p>
-        <div class="menu-btn" style="font-size: small">play again</div>
+        <div class="btn playAgain" style="font-size: small">play again</div>
       </div>
       <div id="turn-bg"></div>
     </div>
+
+    <!-- menu overlay-->
+    <div class="menu">
+      <div class="modal">
+        <h1>PAUSE</h1>
+        <button class="menu-button continue">CONTINUE GAME</button>
+        <button class="menu-button restart">RESTART</button>
+        <button class="menu-button-red">QUIT GAME</button>
+      </div>
+    </div>
+
     <script src="index.js"></script>
   </body>
 </html>

@@ -95,7 +95,7 @@ li {
   100% {
     top: 7px; } }
 
-.menu-btn {
+.btn {
   padding: 0 21px;
   height: 39px;
   border-radius: 20px;
@@ -107,7 +107,7 @@ li {
   font-size: 16px;
   z-index: 2;
   cursor: pointer; }
-  .menu-btn:hover {
+  .btn:hover {
     background-color: #fd6687; }
 
 .btn-large {
@@ -125,6 +125,27 @@ li {
   .btn-large:hover {
     border: 3px solid #5c2dd5;
     box-shadow: 0px 10px 0px 0px #5c2dd5; }
+
+.menu-button,
+.menu-button-red {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  max-width: 40rem;
+  min-height: 4.2rem;
+  padding: 1.2rem 2rem;
+  background-color: #fff;
+  box-shadow: 0 0.8rem 0 0 black;
+  border: 0.3rem solid black;
+  border-radius: 1rem;
+  font-size: 1.5rem; }
+  .menu-button:hover,
+  .menu-button-red:hover {
+    box-shadow: 0 0.8rem 0 0 #5c2dd5; }
+
+.menu-button-red {
+  background-color: #fd6687; }
 
 .board-container {
   width: 335px;
@@ -274,7 +295,8 @@ li {
     text-align: center;
     font-size: 45px; }
 
-#player1, #player2 {
+#player1,
+#player2 {
   font-size: 20px;
   margin-top: -12px; }
 
@@ -372,6 +394,39 @@ li {
 
 #second {
   text-transform: none; }
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; }
+  .menu .modal {
+    background: #7945ff;
+    padding: 20px;
+    border-radius: 2rem;
+    text-align: center;
+    width: 28%;
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    box-shadow: 0 1rem 0 0 black;
+    border: 0.3rem solid black;
+    position: relative;
+    transform: translate(-50%, -50%);
+    top: 31%;
+    left: 14%; }
+    .menu .modal h1 {
+      margin-top: 5%;
+      font-size: 3.5em;
+      color: #fff; }
 
 @media (min-width: 767px) {
   body {

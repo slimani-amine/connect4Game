@@ -39,13 +39,12 @@
     color: $black;
     text-align: center;
     font-size: 45px;
-
   }
-
 }
-#player1, #player2 {
+#player1,
+#player2 {
   font-size: 20px;
-  margin-top: -12px; 
+  margin-top: -12px;
 }
 
 #turn-bg {
@@ -156,3 +155,40 @@
   text-transform: none;
 }
 
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+
+  .modal {
+    background: $purple;
+    padding: 20px;
+    border-radius: 2rem;
+    text-align: center;
+    width: 28%;
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    box-shadow: 0 1rem 0 0 black;
+    border: 0.3rem solid black;
+    position: relative;
+    transform: translate(-50%, -50%);
+    top: 31%;
+    left: 14%;
+
+    h1 {
+      margin-top: 5%;
+      font-size: 3.5em;
+      color: $white;
+    }
+  }
+}

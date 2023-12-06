@@ -1,4 +1,3 @@
-const continueBtn = document.getElementById("continue-btn");
 const pScoreRed = document.getElementById("score-red");
 const pScoreYellow = document.getElementById("score-yellow");
 const currentPlayer = document.getElementById("current-player");
@@ -99,12 +98,12 @@ function togglePlayer() {
   timer = 30;
   time.innerHTML = 30;
 }
+
 //check winner
 function checkWinner(i, j) {
   let range = [],
     k = i,
     p = j;
-  //check row
   while (k < 7 && boardMatrix[k][p] === player) {
     range.push(boardMatrix[k][p]);
     k++;
@@ -127,7 +126,6 @@ function checkWinner(i, j) {
     }, delays[j]);
     return true;
   } else range = [];
-  //check column
   k = i;
   while (p < 6 && boardMatrix[k][p] === player) {
     range.push(boardMatrix[k][p]);
@@ -151,7 +149,7 @@ function checkWinner(i, j) {
     }, delays[j]);
     return true;
   } else range = [];
-  // check y=x line
+
   p = j;
   while (k < 7 && p < 6 && boardMatrix[k][p] === player) {
     range.push(boardMatrix[k][p]);
@@ -179,7 +177,7 @@ function checkWinner(i, j) {
     }, delays[j]);
     return true;
   } else range = [];
-  //check y=-x line
+
   k = i;
   p = j;
   while (k > -1 && p < 6 && boardMatrix[k][p] === player) {
@@ -239,7 +237,7 @@ whiteCol0.addEventListener("click", () => {
     const img2 = document.createElement("img");
 
     img1.src = player === 1 ? redLargeBallSrc : yellowLargeBallSrc;
- 
+
     ball.appendChild(img1);
     ball.appendChild(img2);
     blackCol0.appendChild(ball);
@@ -493,8 +491,29 @@ whiteCol6.addEventListener("mouseover", () => {
   marker.style.left = "560px";
 });
 
-//restart
-const restart = document.querySelector(".restart");
-restart.addEventListener("click", () => {
+//play Again
+const playAgain = document.querySelector(".playAgain");
+playAgain.addEventListener("click", () => {
   window.location.reload();
+});
+
+//menu
+const menuButton = document.querySelector(".menu-btn");
+const continueBtn = document.querySelector(".continue");
+const menu = document.querySelector(".menu");
+menuButton.addEventListener("click", () => {
+  menu.style.display = "flex";
+  clearTimeout(timerID);
+});
+continueBtn.addEventListener("click", () => {
+  menu.style.display = "none";
+  startTimer();
+});
+menu.style.display = "none";
+//restart
+const restart = document.querySelectorAll(".restart");
+restart.forEach((e) => {
+  e.addEventListener("click", () => {
+    window.location.reload();
+  });
 });
