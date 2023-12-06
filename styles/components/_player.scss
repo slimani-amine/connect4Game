@@ -1,27 +1,6 @@
-.player {
-  position: relative;
-  width: 13rem;
-  height: 15rem;
-  background-color: #fff;
-  color: black;
-  border: 0.3rem solid black;
-  border-radius: $border-radius-box-sm;
-  box-shadow: 0 1rem 0 0 black;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  &__img {
-    position: absolute;
-    top: -3rem;
-    left: 3.5rem;
-  }
-  &__title {
-    font-size: 1.6rem;
-    font-weight: 700;
-  }
-  &__score {
-    font-size: 4.6rem;
-    font-weight: 700;
-  }
+#player1-avatar {
+  @include player("../../images/player-one.svg");
+}
+#player2-avatar {
+  @include player("../../images/player-two.svg");
 }

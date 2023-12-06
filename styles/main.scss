@@ -1,20 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;600&family=Sen&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;600&family=Sen&family=Space+Grotesk:wght@700&display=swap");
+
 //variables
 @import "variables";
 
 //base styles
 @import "base";
+
 //mixins
 @import "mixins";
 
 //utilities
-@import "breakpoints";
-@import "mediaQuearies";
+@import "keyframes";
 @import "utilities";
 
-
-
-// cards
+// components
 @import "components/board";
 @import "components/player";
-@import "components/sections";
+@import "components/contents";
+
+//mediaQuearies
+@import "mediaQuearies";

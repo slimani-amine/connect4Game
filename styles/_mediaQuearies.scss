@@ -1,7 +1,283 @@
-@include xl {
-}
-@include md {
-}
+@media (min-width: 767px) {
+  body {
+    min-height: 927px;
+  }
 
-@include sm {
+  .main-page-header {
+    width: 632px;
+  }
+
+  .score-container {
+    width: 632px;
+  }
+
+  .score-container-red {
+    width: 250px;
+    height: 90px;
+    flex-direction: row;
+    gap: 50px;
+  }
+
+  .score-container-yellow {
+    width: 250px;
+    height: 90px;
+    flex-direction: row-reverse;
+    gap: 50px;
+  }
+
+  #score-red,
+  #score-yellow {
+    font-size: 56px;
+  }
+
+  #player1,
+  #player2 {
+    font-size: 20px;
+    margin-top: 5px;
+  }
+
+  .board-container {
+    width: 632px;
+    height: 584px;
+  }
+
+  .black-board {
+    border-radius: 40px;
+    background-image: url(../../images/board-layer-black-large.svg);
+    grid-template-columns: repeat(7, 70px);
+    gap: 18px;
+  }
+
+  .white-board {
+    width: 632px;
+    height: 577px;
+    border-radius: 40px;
+    background-image: url(../../images/board-layer-white-large.svg);
+    grid-template-columns: repeat(7, 70px);
+    gap: 18px;
+  }
+
+  .marker {
+    width: 632px;
+    height: 36px;
+    transition: 400ms;
+    position: relative;
+    top: calc((+100% - 900px) / 4);
+    display: none;
+  }
+
+  #marker {
+    width: 38px;
+    height: 36px;
+    position: absolute;
+    left: 35px;
+    transition: 400ms;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .marker-red {
+    background-image: url(../../images/marker-red.svg);
+  }
+
+  .marker-yellow {
+    background-image: url(../../images/marker-yellow.svg);
+  }
+
+  .ball {
+    width: 70px;
+    height: 75px;
+  }
+
+  .ball img:last-child {
+    top: 18px;
+  }
+
+  @each $index,
+    $duration
+      in (
+        (0, 712ms),
+        (1, 659ms),
+        (2, 600ms),
+        (3, 533ms),
+        (4, 453ms),
+        (5, 350ms)
+      )
+  {
+    .row#{$index} {
+      @include animation(fall#{$index}, #{$duration});
+    }
+  }
+
+  #turn-bg {
+    height: 18%;
+    bottom: 0;
+  }
+
+  .turn-red,
+  .turn-yellow {
+    top: -50px;
+  }
+
+  .wins-rect {
+    top: -50px;
+  }
+
+  @keyframes fall0 {
+    0% {
+      top: -46px;
+    }
+
+    50% {
+      top: 457px;
+    }
+
+    75% {
+      top: 433px;
+    }
+
+    100% {
+      top: 457px;
+    }
+  }
+
+  @keyframes fall1 {
+    0% {
+      top: -46px;
+    }
+
+    50% {
+      top: 369px;
+    }
+
+    75% {
+      top: 345px;
+    }
+
+    100% {
+      top: 369px;
+    }
+  }
+
+  @keyframes fall2 {
+    0% {
+      top: -46px;
+    }
+
+    50% {
+      top: 280px;
+    }
+
+    75% {
+      top: 276px;
+    }
+
+    100% {
+      top: 280px;
+    }
+  }
+
+  @keyframes fall3 {
+    0% {
+      top: -46px;
+    }
+
+    50% {
+      top: 192px;
+    }
+
+    75% {
+      top: 169px;
+    }
+
+    100% {
+      top: 192px;
+    }
+  }
+
+  @keyframes fall4 {
+    0% {
+      top: -46px;
+    }
+
+    50% {
+      top: 105px;
+    }
+
+    75% {
+      top: 83px;
+    }
+
+    100% {
+      top: 105px;
+    }
+  }
+
+  @keyframes fall5 {
+    0% {
+      top: -46px;
+    }
+
+    50% {
+      top: 17px;
+    }
+
+    75% {
+      top: -7px;
+    }
+
+    100% {
+      top: 17px;
+    }
+  }
+}
+@media (min-width: 1050px) {
+  body {
+    min-height: 900px;
+  }
+
+  .marker {
+    display: inline;
+  }
+
+  .score-container {
+    width: 1046px;
+    position: absolute;
+  }
+
+  .score-container-red {
+    width: 120px;
+    height: 150px;
+    flex-direction: column;
+    left: 0px;
+    gap: 0;
+    top: -15px;
+  }
+
+  .score-container-yellow {
+    width: 120px;
+    height: 150px;
+    flex-direction: column;
+    left: 0px;
+    gap: 0;
+    top: -15px;
+  }
+
+  #player1-avatar,
+  #player2-avatar {
+    position: relative;
+    transform: translate(-50%, 0);
+    top: -35px;
+    left: 30px;
+  }
+
+  .turn-red,
+  .turn-yellow {
+    top: -75px;
+  }
+
+  .wins-rect {
+    top: -75px;
+  }
 }

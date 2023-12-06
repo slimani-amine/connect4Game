@@ -1,24 +1,35 @@
-.btn {
-  cursor: pointer;
-  padding: 1rem 2rem;
-  color: #fff;
+.menu-btn {
+  padding: 0 21px;
+  height: 39px;
+  border-radius: 20px;
   background-color: $dark-purple;
-  font-size: 1.7rem;
-  font-weight: 700;
-  line-height: 1.8rem;
-  border-radius: $radius60;
-  border: none;
-  transition: $transition1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+  font-size: 16px;
+  z-index: 2;
+  cursor: pointer;
 
   &:hover {
-    background-color: $pink;
-  } 
+    background-color: $red;
+  }
 }
-.title {
-  color: $primary;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 22px;
-  letter-spacing: 0.25px;
+.btn-large {
+  width: 90%;
+  max-width: 400px;
+  height: fit-content;
+  max-height: 72px;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  border: 3px solid $black;
+  box-shadow: 0px 10px 0px 0px $black;
+  font-size: 24px;
+  cursor: pointer;
+
+  &:hover {
+    border: 3px solid $dark-purple;
+    box-shadow: 0px 10px 0px 0px $dark-purple;
+  }
 }

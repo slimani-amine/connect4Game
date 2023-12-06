@@ -1,21 +1,35 @@
-@mixin h($f-size, $color) {
-  color: $color ;
-  font-size: $f-size;
-  font-weight: 600;
-  line-height: 40px;
-  letter-spacing: 0.75px;
+@mixin board($url, $height: 100%) {
+  width: 100%;
+  height: $height;
+  border-radius: 20px;
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: repeat(7, 40px);
+  grid-template-rows: 1fr;
+  justify-content: center;
+  gap: 6.5px;
 }
 
-@mixin card {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  border-radius: 1.3rem;
-  padding: 7.5px 7.5px 3rem 7.5px;
-  max-width: 44rem;
-
-  &:hover {
-    box-shadow: $box-shadow-light;
-    transition: $hover-transition;
-  }
+@mixin player($url) {
+  position: absolute;
+  width: 54px;
+  height: 59px;
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  left: 130px;
+  transform: translate(-50%, 0);
+  top: -30px;
+}
+@mixin animation($name, $duration) {
+  animation-name: $name;
+  animation-duration: $duration;
 }

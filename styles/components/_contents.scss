@@ -1,0 +1,158 @@
+.score-container {
+  width: 335px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &-red {
+    width: 142px;
+    height: 81px;
+    border-radius: 20px;
+    border: 3px solid $black;
+    background: $white;
+    box-shadow: 0px 10px 0px 0px $black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 16px;
+  }
+
+  &-yellow {
+    width: 142px;
+    height: 81px;
+    border-radius: 20px;
+    border: 3px solid $black;
+    background: $white;
+    box-shadow: 0px 10px 0px 0px $black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: -16px;
+  }
+
+  #score-red,
+  #score-yellow {
+    color: $black;
+    text-align: center;
+    font-size: 45px;
+
+  }
+
+}
+#player1, #player2 {
+  font-size: 20px;
+  margin-top: -12px; 
+}
+
+#turn-bg {
+  height: 30%;
+  width: 100%;
+  border-radius: 60px 60px 0px 0px;
+  background: $dark-purple;
+  position: absolute;
+  bottom: 0;
+}
+
+.turn-red,
+.turn-yellow {
+  width: 191px;
+  height: 160px;
+  z-index: 1;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 26px;
+  flex-shrink: 0;
+  position: relative;
+  top: calc((-100% + 607px) / 5 - 15px);
+}
+
+.turn-red {
+  background-image: url(../../images/turn-background-red.svg);
+  color: $white;
+}
+
+.turn-yellow {
+  background-image: url(../../images/turn-background-yellow.svg);
+  color: $black;
+}
+
+.turn-yellow p:first-child,
+.turn-red p:first-child {
+  font-size: 16px;
+}
+
+.turn-yellow p:last-child,
+.turn-red p:last-child {
+  font-size: 56px;
+}
+
+.wins-rect {
+  width: 285px;
+  height: 160px;
+  border-radius: 20px;
+  border: 3px solid $black;
+  background: $white;
+  box-shadow: 0px 10px 0px 0px $black;
+  color: $black;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 56px;
+  position: relative;
+  top: calc((-100% + 607px) / 5 - 15px);
+  z-index: 2;
+}
+
+#winner {
+  color: $black;
+  font-size: 16px;
+}
+
+.logo {
+  margin-bottom: 49px;
+}
+
+#main-page {
+  width: 100%;
+  height: 100%;
+  background-color: $purple;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+  transition: 0.5s;
+}
+
+.main-page-header {
+  width: 335px;
+  height: 65px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#playing-preventer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#second {
+  text-transform: none;
+}
+
